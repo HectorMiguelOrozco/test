@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+    <link rel="stylesheet" href="bower_components\angular-material\angular-material.css">
+
+</head>
+
+<body ng-app="ty-test">
+
+    <div ng-controller="MainController as vm">
+        {{ vm.name }}
+    </div>
+
+    <ty-people></ty-people>
+
+    <!-- Dependencies -->
+    <script src="bower_components\angular\angular.js"></script>
+    <script src="bower_components\angular-aria\angular-aria.js"></script>
+    <script src="bower_components\angular-animate\angular-animate.js"></script>
+    <script src="bower_components\angular-messages\angular-messages.js"></script>
+    <script src="bower_components\angular-material\angular-material.js"></script>
+
+	<script src="module.js"></script>
+	<script src="main.controller.js"></script>
+
+    <script src="components/people/people.controller.js"></script>
+    <script src="components/people/people.directive.js"></script>
+    <script src="components/people/people.service.js"></script>
+
+
+
+
+</body>
+
+</html>
