@@ -1,5 +1,6 @@
 [
-    { "name": "Carlos", "age": 21 },
-    { "name": "Miguel", "age": 26 },
-    { "name": "Charli 2", "age": 25 }
+    { "name": "Carlos", "age": 21, "face": "http://blogs-images.forbes.com/thumbnails/blog_1057/pt_1057_10212_o.jpg?t=1345576243&width=128&height=128" },
+    { "name": "Miguel", "age": 26, "face": "http://blogs-images.forbes.com/thumbnails/blog_1057/pt_1057_10212_o.jpg?t=1345576243&width=128&height=128"  },
+    { "name": "Charli 2", "age": 25, "face": "http://blogs-images.forbes.com/thumbnails/blog_1057/pt_1057_10212_o.jpg?t=1345576243&width=128&height=128"  },
+    { "name": "Prueba", "age": 33, "face": "http://blogs-images.forbes.com/thumbnails/blog_1057/pt_1057_10212_o.jpg?t=1345576243&width=128&height=128"  }
 ]

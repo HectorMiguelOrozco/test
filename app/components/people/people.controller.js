@@ -9,7 +9,7 @@
     function PeopleController($scope, $mdDialog, PeopleService) {
         var vm = this;
         vm.people = [];
-        vm.person = { name: '', age: null };
+        vm.person = { name: '', age: null, face: '' };
 
         vm.postPeople = postPeople;
         vm.showModal = showModal;
@@ -30,10 +30,10 @@
         }
 
         function postPeople(person) {
-            PeopleService.post(person).then(function (data) {
-                vm.person = { name: '', age: null };
-                console.log('Creó una persona! ', data);
-            });
+                console.log(person);
+                vm.people.push(person);
+                console.log('Creó una persona! ');
+            
         }
 
         function showModal() {

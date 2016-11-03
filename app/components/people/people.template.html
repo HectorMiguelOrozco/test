@@ -1,46 +1,23 @@
-<section layout="columm">
+<form layout="row" name="OpenModal" role="form">
+	<div flex="33" flex-offset="33" layout="column">
+		<br><br><br>
+		<md-button class="md-accent md-raised" ng-click="vm.showModal()">
+			Add holmes
+		</md-button>
+	</div>
+</form>
+<section flex="33" flex-offset="33" layout="columm">
 	<md-list>
-		<md-list-item ng-repeat="person in vm.people">
-			{{ person.name }}
+		<md-list-item class="md-3-line" ng-repeat="person in vm.people">
+			<img ng-src="{{person.face}}?{{$index}}" class="md-avatar"/>
+			<div class="md-list-item-text" layout="column">
+				<h3>{{ person.name }}</h3>
+				<h4>{{ person.age }}</h4>
+			</div>
 		</md-list-item>
 	</md-list>
 </section>
 
-<form layout="row" name="formToValidate" role="form">
-	<div flex="33" flex-offset="33" layout="column">
-		<md-input-container>
-			<label> Name: </label>
-			<input type="text" ng-model="vm.person.name" name="name" required>
-		</md-input-container>
+<section>
 
-		<md-input-container>
-			<label> Age: </label>
-			<input type="number" ng-model="vm.person.age" name="age" min="15" max="50" required>
-
-			<div ng-messages="formToValidate.age.$error">
-				<div ng-message="required">
-					Campo obligatorio
-				</div>
-				<div ng-message="min">
-					La edad mínima es 15 años
-				</div>
-				<div ng-message="max">
-					Edad máxima: 50 años
-				</div>
-			</div>
-		</md-input-container>
-
-		<md-button class="md-primary md-raised" ng-click="vm.postPeople(vm.person)" ng-disabled="formToValidate.$invalid">
-			Añadir!
-		</md-button>
-
-		<md-button class="md-accent md-raised" ng-click="vm.showModal()">
-			Mostrar modal!
-		</md-button>
-	</div>
-
-</form>
-
-<div>
-	{{ vm.person }}
-</div>
+</section>
