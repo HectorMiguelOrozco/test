@@ -33,7 +33,7 @@
                 console.log(person);
                 vm.people.push(person);
                 console.log('Creó una persona! ');
-            
+                vm.closeModal();
         }
 
         function showModal() {
@@ -42,6 +42,10 @@
                 preserveScope: true,
                 scope: $scope
             });
+
+                vm.person.name = "";
+                vm.person.age = "";
+                vm.person.face = "";
         }
     }
 })();
